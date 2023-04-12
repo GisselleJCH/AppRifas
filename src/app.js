@@ -32,6 +32,10 @@ const pool = createPool({
 // EndPoints
 //API RESTful
 
+app.get('/',(req,res)=>{
+    res.send("<h1>Hola</h1>");
+})
+
 app.get('/usuarios',async (req, res)=>{
     try{
         const [rows] = await pool.query(
