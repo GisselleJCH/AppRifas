@@ -14,11 +14,11 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 //DB Configuration
-const DB_HOST = "localhost";
-const DB_PORT = 3306;
-const DB_USER = "root";
-const DB_PASSWORD = "Educa2023*";
-const DB_DATABASE = "apprifas";
+const DB_HOST = process.env.DB_HOST || "localhost";
+const DB_PORT = process.env.DB_PORT || 3306;
+const DB_USER = process.env.DB_USER|| "root";
+const DB_PASSWORD = process.env.DB_PASSWORD || "Educa2023*";
+const DB_DATABASE = process.env.DB_DATABASE || "apprifas";
 
 const pool = createPool({
     host: DB_HOST,
